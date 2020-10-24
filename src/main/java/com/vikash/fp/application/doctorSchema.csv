@@ -1,0 +1,3 @@
+Field	Type	Restrictions
+Id	Nvarchar	NotNull,PrimaryKey
+Name	Nvarchar	NotNull
