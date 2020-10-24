@@ -1,0 +1,5 @@
+Field	Type	Restrictions
+Id	Nvarchar	NotNull,PrimaryKey
+Name	Nvarchar	NotNull
+Address	Nvarchar	Nullable
+PrimaryDoctor	Nvarchar	Nullable,ForeignKey

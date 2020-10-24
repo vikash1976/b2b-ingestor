@@ -23,7 +23,7 @@ import ch.qos.cal10n.MessageConveyor;
 import ch.qos.logback.classic.Logger;
 
 public class Application {
-	public static IMessageConveyor mc = new MessageConveyor(Locale.GERMANY);
+	public static IMessageConveyor mc = new MessageConveyor(Locale.ENGLISH);
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(Application.class);
 	public static void main(String[] args) throws IOException {
 		

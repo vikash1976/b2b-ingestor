@@ -1,0 +1,6 @@
+id,name,address,primarydoctor
+O1,Office 1,Pune,D5
+O2,null,Mumbai,D3
+O3,Office 3,Delhi,D4
+O4,Office 4,null,D5
+O5,Office 5,Indore,D1
