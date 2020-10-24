@@ -66,6 +66,36 @@ Results :
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 ```
 
+## When locale is ENGLISH
+```
+Running com.vikash.fp.application.ApplicationTest
+18:50:44.795 [main] INFO com.vikash.fp.application.Application - Processing schema file: officeSchema.csv and input file: offices.csv
+18:50:45.015 [main] INFO com.vikash.fp.interfaces.AbstractFileReader - Schema violations found for: 
+18:50:45.015 [main] INFO com.vikash.fp.interfaces.AbstractFileReader - [Office [id=O2, name=null, address=Mumbai, primarydoctor=D3]]
+18:50:45.015 [main] INFO com.vikash.fp.application.Application - Records good for further processing:
+18:50:45.015 [main] INFO com.vikash.fp.application.Application - Office [id=O1, name=Office 1, address=Pune, primarydoctor=D5]
+18:50:45.015 [main] INFO com.vikash.fp.application.Application - Office [id=O3, name=Office 3, address=Delhi, primarydoctor=D4]
+18:50:45.015 [main] INFO com.vikash.fp.application.Application - Office [id=O4, name=Office 4, address=null, primarydoctor=D5]
+18:50:45.015 [main] INFO com.vikash.fp.application.Application - Office [id=O5, name=Office 5, address=Indore, primarydoctor=D1]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+18:50:45.016 [main] INFO com.vikash.fp.application.Application - Processing schema file: doctorSchema.csv and input file: doctors.csv
+18:50:45.020 [main] INFO com.vikash.fp.interfaces.AbstractFileReader - Schema violations found for: 
+18:50:45.020 [main] INFO com.vikash.fp.interfaces.AbstractFileReader - [Doctor [id=null, name=Doctor 4], Doctor [id=D8, name=null]]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Records good for further processing:
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D1, name=Doctor 1]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D2, name=Doctor 2]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D3, name=Doctor 3]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D5, name=Doctor 5]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D6, name=Doctor 6]
+18:50:45.020 [main] INFO com.vikash.fp.application.Application - Doctor [id=D7, name=Doctor 7]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.37 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+```
+
 ## How To
 - For or clone this repo
 - Run ***mvn test***
