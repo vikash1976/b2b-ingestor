@@ -65,3 +65,7 @@ Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 ```
+
+## How To
+- For or clone this repo
+- Run ***mvn test***
