@@ -1,5 +1,5 @@
 # b2b-ingestor
-An attempt to build a sample CSV, TSV, XSL[X] (to be attempted) file processor. Aim is to read the csv/tsv/xsl(x) file along with its provided schema as TSV. Process and filter out valid records from invalid records.
+An attempt to build a sample CSV, TSV, XSL[X] (to be attempted) file processor. Aim is to read the csv/tsv/xsl(x) file along with its provided schema as TSV. Process and segregate valid and invalid records.
 
 ## Also aimed to have localized server logging using logback and cal10n.
 
