@@ -23,13 +23,15 @@ import ch.qos.cal10n.MessageConveyor;
 import ch.qos.logback.classic.Logger;
 
 public class Application {
-	public static IMessageConveyor mc = new MessageConveyor(Locale.ENGLISH);
+	public static IMessageConveyor mc = new MessageConveyor(Locale.FRENCH);
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(Application.class);
 	public static void main(String[] args) throws IOException {
 		
 		logger.info(mc.getMessage(Messages.FILE_PROCESSING, args[1], args[0]));
 		//System.out.println(mc.getMessage(Messages.FILE_PROCESSING, args[1], args[0]));
 		List<FileSchema> schemaEntries = readSchemaTSVIntoObjects(args[1], '\u0009');
+		logger.info(mc.getMessage(Messages.SCHEMA_ENTRIES));
+		logger.info(schemaEntries.toString());
 		readCsvFile(args[0], schemaEntries);
 	}
 

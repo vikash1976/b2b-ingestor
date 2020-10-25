@@ -15,5 +15,6 @@ import ch.qos.cal10n.LocaleData;
 public enum Messages {
 	FILE_PROCESSING,
 	SUCCESSFULL_RECORDS,
-	FAILED_RECORDS
+	FAILED_RECORDS,
+	SCHEMA_ENTRIES
 }
