@@ -1,0 +1,3 @@
+Field	Type	Restrictions
+DoctorId	Nvarchar	NotNull,ForeignKey
+OfficeId	Nvarchar	NotNull,ForeignKey

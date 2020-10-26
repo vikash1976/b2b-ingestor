@@ -13,7 +13,7 @@ public class CsvMetadata {
     }
 
     public Map<String, String> parseLine(String line) {
-        // simple implementation 
+        // a simple implementation 
         String[] values = line.split(",");
 
         Map<String, String> record = new HashMap<>();

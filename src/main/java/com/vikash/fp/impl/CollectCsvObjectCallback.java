@@ -67,8 +67,7 @@ public class CollectCsvObjectCallback<T> implements CsvObjectCallback<T> {
 	}
 	private boolean isValidPerSchema(T object, String column, Field field) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		FileSchema schema = findFileSchemaForGivenField(column);
-		//System.out.println("Schema is: ******* " + schema);
-		
+				
 		if (schema.Restrictions.toLowerCase().contains("NotNull".toLowerCase())){
 			return (field.get(object) != null && !field.get(object).equals("null")) ? true : false;
 		} else {
