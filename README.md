@@ -1,7 +1,7 @@
 # b2b-ingestor
 An attempt to build a sample CSV, TSV, XSL[X] file processor. Aim is to read the csv/tsv/xsl(x) file along with its provided schema as TSV. Process and segregate valid and invalid records.
 
-## Also aimed to have localized server logging using logback and cal10n. Apache POI library is used to process XLSX.
+Also aimed to have localized server logging using ***logback*** and ***cal10n***. ***Apache POI*** library is used to process XLSX.
 
 Currently Unit test provides input file name along with its releated schema file name and application looks for those files at a given folder on your machine - folder path is configured in ***Constants class*** . You may like to tweak Unit test and application per your choice of test setup.
 
