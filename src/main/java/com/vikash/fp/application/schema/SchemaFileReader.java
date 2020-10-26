@@ -34,9 +34,9 @@ public class SchemaFileReader {
 				.readValues(csvSchemaInputStream);
 
 		schemaEntries = mappingIterator.readAll();
-		for (FileSchema schema : schemaEntries) {
-			//System.out.println(schema);
-		}
+		/*
+		 * for (FileSchema schema : schemaEntries) { }
+		 */
 		return schemaEntries;
 	}
 }

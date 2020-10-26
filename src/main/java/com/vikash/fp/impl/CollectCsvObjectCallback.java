@@ -14,31 +14,29 @@ public class CollectCsvObjectCallback<T> implements CsvObjectCallback<T> {
 	private List<FileSchema> schemaEnties = new ArrayList<FileSchema>();
 
 	@Override
-    public void process(T object, List<FileSchema> schemaEntries) {
-		//System.out.println("Processing: " + object);
-    	this.schemaEnties = schemaEntries;
-    	boolean isObjectValidPerSchema = true;
+	public void process(T object, List<FileSchema> schemaEntries) {
+
+		this.schemaEnties = schemaEntries;
+		boolean isObjectValidPerSchema = true;
 		try {
-			
+
 			Field[] fields = object.getClass().getDeclaredFields();
-			
+
 			for (Field field : fields) {
-				
-				
+
 				String fieldName = field.getName();
-				//System.out.println("****************** "+ fieldName + " *******************");
-				
+
 				boolean isFieldPassedValidation = isValidPerSchema(object, fieldName, field);
-				if(isFieldPassedValidation) {
-					//System.out.println(fieldName + " passed validation");
+				if (isFieldPassedValidation) {
+
 					isObjectValidPerSchema = true;
 				} else {
-					//System.out.println(fieldName + " failed validation");
+
 					isObjectValidPerSchema = false;
 					break;
 				}
 			}
-			
+
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (NoSuchFieldException e) {
@@ -48,39 +46,40 @@ public class CollectCsvObjectCallback<T> implements CsvObjectCallback<T> {
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		}
-		
-    	if (isObjectValidPerSchema) {
-    		//System.out.println("Adding to passed: " + object);
-    		successfulObjects.add(object);
-    	} else {
-    		//System.out.println("Adding to failed: " + object);
-    		violationFailedObjects.add(object);
-    	}
-    }
+
+		if (isObjectValidPerSchema) {
+
+			successfulObjects.add(object);
+		} else {
+
+			violationFailedObjects.add(object);
+		}
+	}
 
 	public List<T> getSuccessfulObjects() {
 		return successfulObjects;
 	}
-	
+
 	public List<T> getViolationFailedObjects() {
 		return violationFailedObjects;
 	}
-	private boolean isValidPerSchema(T object, String column, Field field) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+
+	private boolean isValidPerSchema(T object, String column, Field field)
+			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		FileSchema schema = findFileSchemaForGivenField(column);
-				
-		if (schema.Restrictions.toLowerCase().contains("NotNull".toLowerCase())){
+
+		if (schema.Restrictions.toLowerCase().contains("NotNull".toLowerCase())) {
 			return (field.get(object) != null && !field.get(object).equals("null")) ? true : false;
 		} else {
 			return true;
 		}
 	}
+
 	private FileSchema findFileSchemaForGivenField(String fieldName) {
-		
-		return this.schemaEnties.stream()
-		  .filter(schema -> fieldName.equalsIgnoreCase(schema.Field))
-		  .findAny()
-		  .orElse(null);
-		
+
+		return this.schemaEnties.stream().filter(schema -> fieldName.equalsIgnoreCase(schema.Field)).findAny()
+				.orElse(null);
+
 	}
 
 }

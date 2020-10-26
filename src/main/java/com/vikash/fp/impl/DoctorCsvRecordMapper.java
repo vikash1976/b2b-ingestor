@@ -7,14 +7,12 @@ import com.vikash.fp.interfaces.CsvRecordMapper;
 public class DoctorCsvRecordMapper implements CsvRecordMapper<Doctor> {
 
 	@Override
-    public Doctor map(Map<String, String> csvRecord, int lineNumber) {
-        //System.out.println(csvRecord);
-    	String id = csvRecord.get("id");
-        String name = csvRecord.get("name");
-        
+	public Doctor map(Map<String, String> csvRecord, int lineNumber) {
 
-        return new Doctor(id, name);
-    }
+		String id = csvRecord.get("id");
+		String name = csvRecord.get("name");
 
-	
+		return new Doctor(id, name);
+	}
+
 }

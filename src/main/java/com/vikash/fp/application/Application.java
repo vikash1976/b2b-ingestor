@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.Locale;
+import java.util.regex.Pattern;
+
+import org.slf4j.LoggerFactory;
 
 import com.vikash.fp.application.schema.FileSchema;
 import com.vikash.fp.application.schema.SchemaFileReader;
@@ -18,18 +22,13 @@ import com.vikash.fp.impl.OfficeCsvRecordMapper;
 import com.vikash.fp.impl.XLXSReader;
 import com.vikash.fp.interfaces.AbstractFileReader;
 import com.vikash.fp.messages.Messages;
-import java.util.Locale;
-import java.util.regex.Pattern;
-
-import org.apache.poi.xssf.XLSBUnsupportedException;
-import org.slf4j.LoggerFactory;
 
 import ch.qos.cal10n.IMessageConveyor;
 import ch.qos.cal10n.MessageConveyor;
 import ch.qos.logback.classic.Logger;
 
 public class Application {
-	public static IMessageConveyor mc = new MessageConveyor(Locale.ENGLISH);
+	public static IMessageConveyor mc = new MessageConveyor(Locale.FRENCH);
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) throws IOException {

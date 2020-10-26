@@ -42,11 +42,11 @@ public class XLXSReader implements AbstractFileReader {
 			throws IOException {
 		CsvObjectCallback<T> collectCsvObjectCallback = new CollectCsvObjectCallback<T>();
 		read(fileName, csvLineMapper, collectCsvObjectCallback, schemaEntries);
-		
+
 		logger.info(Application.mc.getMessage(Messages.FAILED_RECORDS));
-		
+
 		logger.info(((CollectCsvObjectCallback<T>) collectCsvObjectCallback).getViolationFailedObjects().toString());
-		
+
 		return ((CollectCsvObjectCallback<T>) collectCsvObjectCallback).getSuccessfulObjects();
 
 	}
