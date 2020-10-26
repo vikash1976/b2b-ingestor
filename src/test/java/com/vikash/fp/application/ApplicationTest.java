@@ -3,6 +3,9 @@ package com.vikash.fp.application;
 import java.io.IOException;
 
 import org.junit.Test;
+import org.supercsv.exception.SuperCsvCellProcessorException;
+
+import com.vikash.fp.application.alternates.SuperCSVParserSample;
 
 public class ApplicationTest {
 
@@ -27,4 +30,9 @@ public class ApplicationTest {
 		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 	}
 
+	@Test
+	public void doctorFileIngestSuperCSVTest() throws IOException {
+		new SuperCSVParserSample().processCSV();
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+	}
 }

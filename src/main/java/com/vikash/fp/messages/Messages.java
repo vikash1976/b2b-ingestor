@@ -7,5 +7,5 @@ import ch.qos.cal10n.LocaleData;
 @BaseName("messages")
 @LocaleData(defaultCharset = "UTF8", value = { @Locale("en_UK"), @Locale("fr_FR"), @Locale("de_DE") })
 public enum Messages {
-	FILE_PROCESSING, SUCCESSFULL_RECORDS, FAILED_RECORDS, SCHEMA_ENTRIES
+	FILE_PROCESSING, SUCCESSFULL_RECORDS, FAILED_RECORDS, SCHEMA_ENTRIES, FAIL_STOP_MEAASE
 }

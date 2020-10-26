@@ -14,6 +14,10 @@ public class Office {
 		this.primaryDoctor = primaryDoctor;
 	}
 
+	public Office() {
+
+	}
+
 	public String getId() {
 		return id;
 	}
