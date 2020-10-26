@@ -142,5 +142,5 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 ```
 
 ## How To
-- For or clone this repo
+- Fork or clone this repo
 - Run ***mvn test***
