@@ -5,7 +5,7 @@ Also aimed to have localized server logging using ***logback*** and ***cal10n***
 
 Currently Unit test provides input file name along with its releated schema file name and application looks for those files at a given folder on your machine - folder path is configured in ***Constants class*** . You may like to tweak Unit test and application per your choice of test setup.
 
-## When locale is GERMANY:
+## When locale is GERMAN:
 ```
 Running com.vikash.fp.application.ApplicationTest
 10:08:14.387 [main] INFO com.vikash.fp.application.Application - Verarbeitungsschemadatei: officeSchema.txt und Eingabedatei: offices.csv
